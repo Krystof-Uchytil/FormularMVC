@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihláška na reprezentační soustředění v rugby</title>
+    <link rel="stylesheet" href="../Kryštof%20škola/design.css">
+    <script src="../Kryštof%20škola/script.js" defer></script>
+</head>
+<body>
+<h1>Přihláška na reprezentační soustředění v rugby</h1>
+<form action="../php.php" method="POST" enctype="multipart/form-data">
+    <!-- Jméno -->
+    <label for="jmeno">Jméno:</label>
+    <input type="text" id="jmeno" name="jmeno" required>
+
+    <!-- Příjmení -->
+    <label for="prijmeni">Příjmení:</label>
+    <input type="text" id="prijmeni" name="prijmeni" required>
+
+    <!-- Datum narození -->
+    <label for="datum_narozeni">Datum narození:</label>
+    <input type="date" id="datum_narozeni" name="datum_narozeni" required>
+
+    <!-- Profilová fotka -->
+    <label for="fotka">Profilová fotka:</label>
+    <input type="file" id="fotka" name="fotka" accept="image/*" required>
+
+    <!-- Bydliště -->
+    <label for="bydliste">Bydliště:</label>
+    <input type="text" id="bydliste" name="bydliste" required>
+
+    <!-- Číslo občanského průkazu -->
+    <label for="op">Číslo občanského průkazu:</label>
+    <input type="text" id="op" name="op" required>
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Telefon -->
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" pattern="\+?[0-9]{9,15}" required>
+
+    <!-- Platnost lékařské prohlídky -->
+    <label>Lékařská prohlídka platná:</label>
+    <label><input type="radio" name="lekarska_prohlidka" value="ano" required> Ano</label>
+    <label><input type="radio" name="lekarska_prohlidka" value="ne" required> Ne</label>
+
+    <!-- Vybavení -->
+    <label for="vybaveni">Vybavení:</label>
+    <div id="vybaveni">
+        <label><input type="checkbox" name="vybaveni[]" value="bezky"> Běžky</label>
+        <label><input type="checkbox" name="vybaveni[]" value="lyze"> Lyže</label>
+        <label><input type="checkbox" name="vybaveni[]" value="snowboard"> Snowboard</label>
+        <label><input type="checkbox" name="vybaveni[]" value="brusle"> Lední brusle</label>
+        <label><input type="checkbox" name="vybaveni[]" value="hokej"> Hokejové vybavení</label>
+    </div>
+
+    <!-- Doprava -->
+    <label>Způsob dopravy:</label>
+    <label><input type="radio" name="doprava" value="auto" required> Auto</label>
+    <label><input type="radio" name="doprava" value="autobus" required> Týmový autobus</label>
+
+    <!-- CAPTCHA -->
+    <label for="captcha">Opíšete prosím text: 5 + 3 = ?</label>
+    <input type="text" id="captcha" name="captcha" required>
+
+    <!-- Submit -->
+    <button type="submit">Odeslat přihlášku</button>
+</form>
+</body>
+</html>
